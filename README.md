@@ -19,3 +19,8 @@ And here's some important points:
 - Keep coding
 - Breathe
 - Consider coffee
+
+For help:
+1. [Google:](https://www.google.com)
+2. Fellow students
+3. Me
