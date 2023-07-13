@@ -1,0 +1,61 @@
+/* four basic selectors
+- element (tag)
+- class
+- id
+- universal
+*/
+
+h2 {
+    color: darkorchid;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.first {
+    color: blue;
+}
+
+.second {
+    color: peru;
+}
+
+#kids {
+    color: orangered
+}
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* attribute selectors */
+[src] {
+    width: 10%;
+}
+
+[href="https://google.com"] {
+    color: yellow;
+}
+
+[href="mailto:something"] {
+    color: pink;
+}
+
+/* starts with */
+[href^="mailto"] {
+    color: lawngreen;
+} 
+
+
+
+/* ends with */
+[href$="mailto"] {
+    color: lawngreen;
+}
+
+/* contains */
+[href*="mailto"] {
+    color: lawngreen;
+}
+
+p:hover {
+    display: none;
+}
