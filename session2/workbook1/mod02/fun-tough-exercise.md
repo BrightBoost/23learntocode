@@ -11,6 +11,6 @@ var minutesToAdd = 13;
 // magic brain stuff happening
 
 // newHour = 18
-// newMinute = 1
+// newMinute = 2
 
 ```
