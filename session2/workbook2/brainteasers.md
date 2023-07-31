@@ -26,3 +26,20 @@
 
 14. **Collatz Conjecture** - Write a function that calculates the number of steps it takes to reach 1 if the Collatz Conjecture is followed (if the number is even, divide it by 2, if it's odd, multiply by 3 and add 1).
 
+15. **Guess the Number**: Write a script where the computer randomly selects a number between 1 and 100 and the user has to guess what the number is. After every guess, the computer should tell the user if the guess is higher, lower, or correct. Bonus bonus: keep track of the number of guesses, make it possible to play multiple rounds and display the average number of guesses.
+
+16. **Lucky Numbers**: A number is called lucky if the sum of its digits, as well as the sum of the squares of its digits, are both prime numbers. Write a function that determines if a number is lucky or not.
+
+For example, **23**:*
+* The sum of its digits is 2 + 3 = 5. 
+* The sum of the squares of its digits is 2² + 3² = 4 + 9 = 13.
+Both 5 and 13 are prime numbers. So, 23 is a lucky number. 
+
+17. **Happy Numbers**: A number is called happy if it leads to 1 after a sequence of steps where in each step number is replaced by sum of squares of its digit. Write a function that determines if a number is happy or not.
+
+For example, **19**:
+* Step 1: 1² + 9² = 82
+* Step 2: 8² + 2² = 68
+* Step 3: 6² + 8² = 100
+* Step 4: 1² + 0² + 0² = 1
+
