@@ -21,3 +21,8 @@
 11. **Sort an Array** - Write a function that takes an array of numbers and returns it sorted in ascending order.
 
 12. **FizzBuzz** - Write a function that prints the numbers from 1 to 100. But for multiples of three, it prints “Fizz” instead of the number and for the multiples of five, it prints “Buzz”. For numbers which are multiples of both three and five, it prints “FizzBuzz”.
+
+13. **Even or Odd** - Write a function that checks if a number is even or odd.
+
+14. **Collatz Conjecture** - Write a function that calculates the number of steps it takes to reach 1 if the Collatz Conjecture is followed (if the number is even, divide it by 2, if it's odd, multiply by 3 and add 1).
+
