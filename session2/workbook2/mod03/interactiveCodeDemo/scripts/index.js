@@ -13,11 +13,11 @@ function onEstimateTotalCostClicked() {
     const surcharge = document.getElementById("surcharge");
     const totalDue = document.getElementById("totalDue");
     
-    if(days.value == "") {
+    if(isNaN(days.value) || days.value < 0) {
         alert("Please enter a valid nr for days");
         return;
     }
-    
+
     // reset output
     resetOutput();
 

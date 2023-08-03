@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ACME Car Rental</title>
 </head>
+
 <body>
-    <form>
-        <span>ACME Car Rental</span><br>
-        <input type="date" id="date"><label for="date">Pickup date</label><br>
-        <input type="number" id="days"><label for="days">Nr of days</label><br>
-        <span>Options</span><br>
-        <input type="checkbox" class="options" id="electronicToll"><label for="electronicToll">Electronic Toll Tag - 3.95</label><br>
-        <input type="checkbox" class="options" id="gps"><label for="gps">GPS - 2.95</label><br>
-        <input type="checkbox" class="options" id="roadSide"><label for="roadSide">Roadside assistance - 2.95</label><br>
-        <span>Under 25?</span>
-        <input type="radio" name="age" value="no" checked>No 
-        <input type="radio" name="age" value="yes">Yes 
-        <button type="button" id="estimateTotalCost">Estimate Total Cost</button>
-    </form>
-    <p id="carRental">Car rental: </p>
-    <p id="options">Options: </p>
-    <p id="surcharge">Surcharge: </p>
-    <p id="totalDue">Total due: </p>
+    <fieldset>
+        <legend>ACME Car Rental</legend>
+        <form>
+            <input type="date" id="date"><label for="date">Pickup date</label><br>
+            <input type="number" id="days" min="0"><label for="days">Nr of days</label><br>
+            <span>Options</span><br>
+            <input type="checkbox" class="options" id="electronicToll"><label for="electronicToll">Electronic Toll Tag -
+                3.95</label><br>
+            <input type="checkbox" class="options" id="gps"><label for="gps">GPS - 2.95</label><br>
+            <input type="checkbox" class="options" id="roadSide"><label for="roadSide">Roadside assistance -
+                2.95</label><br>
+            <span>Under 25?</span>
+            <input type="radio" name="age" value="no" checked>No
+            <input type="radio" name="age" value="yes">Yes
+            <button type="button" id="estimateTotalCost">Estimate Total Cost</button>
+        </form>
+        <p id="carRental"></p>
+        <p id="options"></p>
+        <p id="surcharge"></p>
+        <p id="totalDue"></p>
+    </fieldset>
     <script src="scripts/index.js"></script>
 </body>
+
 </html>
