@@ -2,6 +2,14 @@
 // create an array of your favorite movie titles, display them all with the use of for in
 
 // for in
+const fairyPowers = {
+    "Invisibility": 8,
+    "Flying": 9,
+    "Wish Granting": 10,
+    "Time Travel": 7
+};
+
+// Write a for...in loop here to print all the values of the object
 
 
 // fun
