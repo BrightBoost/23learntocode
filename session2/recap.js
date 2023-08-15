@@ -18,7 +18,7 @@ let result1 = func(2, 4);
 let result2 = func1(2, 4);
 
 function same(a, b) {
-    if(a == b) {
+    if (a == b) {
         return true;
     } else {
         return false;
@@ -28,7 +28,7 @@ function same(a, b) {
 let shortest = (s1, s2) => s1 == s2;
 
 let longer = (s1, s2) => {
-    if(str1 == str2) {
+    if (str1 == str2) {
         return true;
     } else {
         return false;
@@ -88,7 +88,6 @@ console.log(superheroArray);
 // arrow functions for arrays and objects
 superheroArray.forEach(superhero => console.log(superhero.name));
 
-// i want to print the names of all the characters that have the hobby "Sailing"
 const spongebobCharacters2 = [
     { name: "SpongeBob SquarePants", job: "Fry Cook at the Krusty Krab", hobbies: ["Jellyfishing", "Blowing Bubbles", "Karate"] },
     { name: "Patrick Star", job: "Unemployed", hobbies: ["Sleeping", "Eating", "Watching TV"] },
@@ -104,7 +103,33 @@ const spongebobCharacters2 = [
     { name: "Karen", job: "Chum Bucket Computer/Wife of Plankton", hobbies: ["Computing", "Assisting Plankton", "Sarcasm"] }
 ];
 
+// i want to print the names of all the characters that have the hobby "Sailing"
+spongebobCharacters2
+    .filter(sC => sC.hobbies.find(hobby => hobby == "Sailing") != undefined)
+    .forEach(sC => console.log(sC.name));
 
+//michaels - better than mine ^
+spongebobCharacters2
+    .filter(character => character.hobbies.includes("Sailing"))
+    .forEach(character => console.log(character.name));
+
+// james
+spongebobCharacters2.forEach(x => {
+    if (x.hobbies.findIndex(hobby => hobby == "Sailing") != -1) {
+        console.log(x.name)
+    }
+});
+
+// mandana
+let spongeBobCharacterWithHobbySailingArray = spongebobCharacters2.filter(spongebobCharacter => spongebobCharacter.hobbies.includes("Sailing"));
+console.log(spongeBobCharacterWithHobbySailingArray);
+spongeBobCharacterWithHobbySailingArray.forEach(spongeBobCharacterWithHobbySailing => console.log(spongeBobCharacterWithHobbySailing.name));
+// foreach.hobbies(console.log(spongebobCharacters2.name));
+
+// please print the second hobby of characters with the word "retired" in their job
+spongebobCharacters2.filter(sC => sC.job.toLowerCase().includes("retired superhero ")).forEach(sC => console.log(sC.hobbies[1]));
+// easier: please print the hobbies of a character with the name Patrick Star (using foreach)
+spongebobCharacters2.find(sC => sC.name == "Patrick Star").hobbies.forEach(hobby => console.log(hobby));
 // for in
 
 // for of
