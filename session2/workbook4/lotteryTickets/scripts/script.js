@@ -19,7 +19,7 @@ window.onload = () => {
 }
 
 function loadWinningTicketsTable() {
-    let table = document.getElementById("winningTicketsTbl");
+    let table = document.getElementById("winningTicketsTblBody");
 
     let lengthArr = winningTickets.length;
     for (let i = 0; i < lengthArr; i++) {
@@ -36,7 +36,7 @@ function loadWinningTicketsTable() {
     }
 }
 
-function buildTicketRow(row, winningTicket) {
+function buildTicketRow(table, winningTicket) {
     let row = table.insertRow(-1);
 
     let cell1 = row.insertCell(0);
