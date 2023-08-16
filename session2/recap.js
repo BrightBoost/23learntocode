@@ -163,9 +163,6 @@ for (let hobby of arrHobbies) {
 // }
 
 //https://jsonplaceholder.typicode.com/users
-// I want to print all the names in this object using what we talked about.
-
-// I want to loop through the first object and see all the properties available
 
 // complex data structures
 
@@ -401,3 +398,21 @@ let users = [
         }
     }
 ]
+
+// I want to print all the names in this object using what we talked about.
+for(let user of users) {
+    console.log(user.name);
+}
+
+// I want to loop through the first object and see all the properties available
+showAllPropValues(users[0]);
+
+function showAllPropValues(obj) {
+    for(let prop in obj) {
+        if(typeof obj[prop] == "object") {
+            showAllPropValues(obj[prop]);
+        } else {
+            console.log(prop + ": " + obj[prop]);
+        }
+    }
+}
