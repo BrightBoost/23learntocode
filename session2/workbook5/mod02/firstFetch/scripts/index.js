@@ -8,8 +8,13 @@ function onLoadwindow() {
 function getUser() {
     let userId = this.value;
     fetch(`http://jsonplaceholder.typicode.com/users/${userId}`)
-        .then(user => user.json())
         .then(user => {
+            let u = user.json();
+            console.log(u);
+            return u;
+        })
+        .then(user => {
+            console.log(user);
             const showUserEmail = document.getElementById("showUserEmail");
             showUserEmail.innerHTML = "The email is:" + user.email;
         });
