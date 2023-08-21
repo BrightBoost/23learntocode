@@ -1,0 +1,35 @@
+[
+    {
+        "title": "JavaScript from Frontend to Backend",
+        "author": [
+            {
+                "name": "Eric S",
+                "email": "eric@sarrion.com"
+            }
+        ],
+        "year": 2022,
+        "categories": [
+            "coding",
+            "JavaScript"
+        ]
+    },
+    {
+        "title": "Spring Boot and Angular",
+        "author": [
+            {
+                "name": "Greg",
+                "email": "greg@greg.com"
+            },
+            {
+                "name": "Devlin",
+                "email": "devlin@dev.com"
+            }
+        ],
+        "year": 2023,
+        "categories": [
+            "coding",
+            "Spring",
+            "Angular"
+        ]
+    }
+]
