@@ -16,7 +16,7 @@ function populateUsersTable() {
                 id: "Id",
                 name: "Name",
                 phone: "Phone"
-            }
+            };
             let headerRow = usersTableBody.insertRow(-1);
             for (let headerProp in headers) {
                 headerRow.insertCell(-1).innerHTML = headers[headerProp];

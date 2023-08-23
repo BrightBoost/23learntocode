@@ -1,0 +1,90 @@
+[
+    {
+        "instructorId": 1,
+        "name": "Rob",
+        "coursesTaught": [
+            {"id": 1, "courseName": "HTML5 and CSS3"},
+            {"id": 3, "courseName": "Angular"}
+        ]
+    },
+    {
+        "instructorId": 2,
+        "name": "Dana",
+        "coursesTaught": [
+            {"id": 2, "courseName": "JavaScript"},
+            {"id": 5, "courseName": "C#"},
+            {"id": 7, "courseName": ".NET Web API"}
+        ]
+    },
+    {
+        "instructorId": 3,
+        "name": "Maaike",
+        "coursesTaught": [
+            {"id": 4, "courseName": "Java"},
+            {"id": 6, "courseName": "Java Spring Boot"}
+        ]
+    },
+    {
+        "instructorId": 4,
+        "name": "Zephaniah",
+        "coursesTaught": [
+            {"id": 8, "courseName": "Algebra"}
+        ]
+    },
+    {
+        "instructorId": 5,
+        "name": "Elisha",
+        "coursesTaught": [
+            {"id": 9, "courseName": "Statistics"}
+        ]
+    },
+    {
+        "instructorId": 6,
+        "name": "Natalie",
+        "coursesTaught": [
+            {"id": 10, "courseName": "Composition"}
+        ]
+    },
+    {
+        "instructorId": 7,
+        "name": "Siddalee",
+        "coursesTaught": [
+            {"id": 11, "courseName": "Creative Fiction"}
+        ]
+    },
+    {
+        "instructorId": 8,
+        "name": "Ezra",
+        "coursesTaught": [
+            {"id": 12, "courseName": "Playwriting"}
+        ]
+    },
+    {
+        "instructorId": 9,
+        "name": "Pursalane",
+        "coursesTaught": [
+            {"id": 13, "courseName": "Basic Finance"}
+        ]
+    },
+    {
+        "instructorId": 10,
+        "name": "Ian",
+        "coursesTaught": [
+            {"id": 14, "courseName": "Basics of Stocktrading"}
+        ]
+    },
+    {
+        "instructorId": 11,
+        "name": "Zachary",
+        "coursesTaught": [
+            {"id": 15, "courseName": "Entrepreneurship"}
+        ]
+    },
+    {
+        "instructorId": 12,
+        "name": "Brittany",
+        "coursesTaught": [
+            {"id": 16, "courseName": "Tax Laws"}
+        ]
+    }
+]
