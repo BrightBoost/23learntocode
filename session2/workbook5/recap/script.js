@@ -238,13 +238,62 @@ let headers = {
 };
 
 // for in - grab first user object - display the data table like
-for(let prop in headers) {
+for (let prop in headers) {
     console.log(prop + ": " + users[0][prop]);
 }
 
+console.log("***************************************")
 // for in - show the address details of the 4th user (similar display style, skip geo)
+// create a new array for headers
+let headersAddress = {
+    street: "Street", suite: "Suite", city: "City", zipcode: "Zipcode"
+};
 
-// for of
+for (let prop in headersAddress) {
+    console.log(headersAddress[prop] + ": " + users[3].address[prop]);
+}
 
+console.log("***************************************")
+
+let headersArray = ["Street", "Zipcode"];
+
+for (let key of headersArray) {
+    console.log(key + ": " + users[3].address[key.toLowerCase()]);
+}
+
+console.log("***************************************")
+
+// don't create a new array for headers
+for (let prop in users[3].address) {
+    if (prop != "geo") {
+        console.log(addressToPrettyKey(prop) + ": " + users[3].address[prop]);
+    }
+}
+
+function addressToPrettyKey(key) {
+    let prettyKey = key;
+    switch (key) {
+        case "street":
+            prettyKey = "Street";
+            break;
+        case "city":
+            prettyKey = "City";
+            break;
+    }
+
+    return prettyKey;
+}
+console.log("***************************************")
+
+// for of - only for iterables, objects are not iterable
+for(let user of users) {
+    console.log(user.name);
+}
+
+console.log("***************************************")
 
 // for each
+users.forEach(user => console.log(user.name));
+
+// exercise: for every user, print the name, phone and username
+// user for of and for in
