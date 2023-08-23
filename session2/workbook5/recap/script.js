@@ -286,7 +286,7 @@ function addressToPrettyKey(key) {
 console.log("***************************************")
 
 // for of - only for iterables, objects are not iterable
-for(let user of users) {
+for (let user of users) {
     console.log(user.name);
 }
 
@@ -295,5 +295,33 @@ console.log("***************************************")
 // for each
 users.forEach(user => console.log(user.name));
 
-// exercise: for every user, print the name, phone and username
+// exercise: for every user, print the any header that is in a given array (name, phone, email in this case)
 // user for of and for in
+
+let headersObj = {
+    name: "street", phone: "suite", username: "zipcode"
+};
+
+
+for (let user of users) {
+    for (let key in headersObj) {
+        console.log(key + ": " + user[key]);
+    }
+}
+
+
+// without an array
+for (let user of users) {
+    for (let prop in user) {
+        if (prop == "name" || prop == "phone" || prop == "username") {
+            console.log(prop + ": " + user[prop])
+        }
+    }
+}
+
+// foreach
+let headers3 = ["name", "phone", "username"];
+headers3.forEach(header => {
+    console.log(header + users[header]);
+
+});
