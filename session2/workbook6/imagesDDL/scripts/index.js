@@ -36,27 +36,25 @@ function onImageNamesDDLChange() {
     let imageNamesDDL = $("#imageNamesDDL");
     let selectedFile = imageNamesDDL.val();
     if (selectedFile == "") return;
-    let p = $("<p>").append($(selectedFile));
+    let p = $("<p>").text($(selectedFile));
     let imageDiv = $("#imageDiv");
-    imageDiv.append($("<img>", {
-        src: "images/" + selectedFile,
-        alt: "",
-        width: "300"
-    }));
+    
     let newButton = $("<input>", {
         type: "button",
         value: "Delete Image File"
     });
     newButton.on("click", function () {
-         let imageDiv = document.getElementById("imageDiv");
         // 'this' refers to the element the event occurred on
-        let thisButton = this;
-        let myParentDiv = thisButton.parentElement;
-        imageDiv.removeChild(myParentDiv);
+        $(this).parent().remove();
     });
     let newDiv = $("<div>").append(p);
     newDiv.append($("<br>"));
     newDiv.append(newButton);
+    newDiv.append($("<img>", {
+        src: "images/" + selectedFile,
+        alt: "",
+        width: "300"
+    }));
     imageDiv.append(newDiv);
 
     // if (imageNamesDDL.selectedIndex == 0) return;
