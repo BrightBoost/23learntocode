@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="addProduct">
+        Productname: <input type="text" id="productName" name="productName"><br>
+        Unit price: <input type="text" id="unitPrice" name="unitPrice"><br>
+        Units in stock: <input type="text" id="unitsInStock" name="unitsInStock"><br>
+        <select id="categorySelect" name="categoryId"></select><br>
+        Supplier: <input type="text" id="supplier" name="supplier"><br>
+        Discontinued: <input type="text" id="discontinued" name="discontinued"><br>
+        <input type="submit" value="Add product">
+    </form>
+    <table id="products">
+        <thead id="productTableHead"></thead>
+        <tbody id="productTableBody"></tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
