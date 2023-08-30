@@ -11,17 +11,14 @@ $(document).ready(() => {
         $("#categorySelect").change(onCategorySelectChange);
     });
 
-
-
-    // assign event handler to form button for post
+    // assign event handler to form submit for post
+    $("#addProduct").on("submit", onAddProduct);
 });
 
 
-// create method for post product
-
 // event handler to change category select - populate table 
 function onCategorySelectChange() {
-    let selectedCategoryId = $(this).val();
+    let selectedCategoryId = $("#categorySelect").val();
     $.getJSON("http://localhost:8081/api/products", function (products) {
         $("#productTableBody").empty();
         $("#productTableHead").empty();
@@ -30,7 +27,7 @@ function onCategorySelectChange() {
             unitPrice: "Price"
         };
         createProductTable(products, selectedCategoryId, tableHeaderObject);
-        
+
     });
 }
 
@@ -57,4 +54,16 @@ function createProductTable(products, selectedCategoryId, tableHeaderObject) {
         }
 
     });
+}
+
+function onAddProduct() {
+    $.post("http://localhost:8081/api/products",
+        $("#addProduct").serialize(),
+        function (result, textStatus, jqXHR) {
+            onCategorySelectChange();
+            console.log(textStatus);
+            console.log(jqXHR);
+        }
+    );
+    return false;
 }
