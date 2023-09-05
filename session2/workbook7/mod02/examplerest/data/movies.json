@@ -1,1 +1,16 @@
-[{"id":3,"title":"Lord of the rings","yearreleased":2001},{"id":4,"title":"Cycling Chenxin","yearreleased":2003},{"id":5,"title":"Harry Potter","yearreleased":2003}]
+[
+    {
+        "id": 3,
+        "title": "Lord of the rings",
+        "yearreleased": 2001
+    },
+    {
+        "title": "Finding nemo",
+        "yearreleased": 2003
+    },
+    {
+        "title": "Finding nemo",
+        "yearreleased": 2003,
+        "id": "5"
+    }
+]

@@ -44,6 +44,21 @@ app.post("/api/movies", urlencodedParser, function (req, res) {
     res.status(201).end(JSON.stringify(movie));
 });
 
+app.put("/api/movies/:id", urlencodedParser, function(req, res) {
+    let id = req.params.id;
+    console.log(`Updating movie with ${id}`);
+    let data = JSON.parse(fs.readFileSync(__dirname + "/data/movies.json", "utf-8"));
+    let movieUpdateIndex = data.findIndex(movie => movie.id == id);
+    if(movieUpdateIndex != -1) {
+        data[movieUpdateIndex].id = id;
+        data[movieUpdateIndex] = req.body;
+        fs.writeFileSync(__dirname + "/data/movies.json", JSON.stringify(data));
+        res.send("Movie updated.")
+    } else {
+        res.status(404).send("Movie not found.");
+    }
+});
+
 app.delete("/api/movies/:id", function(req, res) {
     let id = req.params.id;
     console.log(`Deleting ${id}`);
