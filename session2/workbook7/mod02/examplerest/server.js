@@ -50,8 +50,13 @@ app.put("/api/movies/:id", urlencodedParser, function(req, res) {
     let data = JSON.parse(fs.readFileSync(__dirname + "/data/movies.json", "utf-8"));
     let movieUpdateIndex = data.findIndex(movie => movie.id == id);
     if(movieUpdateIndex != -1) {
-        data[movieUpdateIndex].id = id;
-        data[movieUpdateIndex] = req.body;
+        if(req.body.title != undefined) {
+            data[movieUpdateIndex].title = req.body.title;
+        }
+        if(req.body.yearreleased != undefined) {
+            data[movieUpdateIndex].yearreleased = req.body.yearreleased;
+        }
+    
         fs.writeFileSync(__dirname + "/data/movies.json", JSON.stringify(data));
         res.send("Movie updated.")
     } else {
