@@ -1,9 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
-const { dirname } = require("path");
 
 let app = express();
+let urlencodedParser = bodyParser.urlencoded({extended: true});
+
+app.use(express.static("public"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/api/movies", function(req, res) {
     console.log("Got a get request for all movies");
@@ -23,9 +27,23 @@ app.get("/api/movies/:id", function(req, res) {
     }
 });
 
-app.use(express.static("public"));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.post("/api/movies", urlencodedParser, function(req, res) {
+    console.log("Post received for adding a movie" + JSON.stringify(req.body));
+    let dataIds = JSON.parse(fs.readFileSync(__dirname + "/data/next-id.json", "utf-8"));
+    let movie = {
+        id: dataIds.movieId++,
+        title: req.body.title,
+        yearreleased: req.body.yearreleased
+    };
+    let data = JSON.parse(fs.readFileSync(__dirname + "/data/movies.json", "utf-8"));
+
+    data.push(movie);
+    fs.writeFileSync(__dirname + "/data/movies.json", JSON.stringify(data));
+    fs.writeFileSync(__dirname + "/data/next-id.json", JSON.stringify(dataIds));
+
+    res.status(201).end(JSON.stringify(movie));
+});
+
 
 let server = app.listen(8081, () => {
     console.log("App listening to port " + server.address().port);
