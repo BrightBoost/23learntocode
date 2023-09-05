@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(() => {
     // get all the products, and populate dropdown
     $.getJSON("http://localhost:8081/api/categories", function (categories) {
@@ -27,7 +29,6 @@ function onCategorySelectChange() {
             unitPrice: "Price"
         };
         createProductTable(products, selectedCategoryId, tableHeaderObject);
-
     });
 }
 
@@ -67,3 +68,25 @@ function onAddProduct() {
     );
     return false;
 }
+
+// other way of post
+// function onAddProduct() {
+
+//     $.post({
+//         url: "http://localhost:8081/api/products",
+//         data: {
+//             "productName": $("#productName").val(),
+//         }
+//     })
+//         .done(function (data) {
+//             // confirm a new student added
+//             console.log(data);
+//             return false; // don't refresh the form
+//         })
+//         .fail(function (xhr, status, error) {
+//             // error message when post doesn't work
+//             console.log(data);
+
+//             return false; // don't refresh the form
+//         });
+// }
