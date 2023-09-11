@@ -10,3 +10,6 @@ function displayResult(result: number): void {
 
 let x = displayResult(result);
 console.log(x);
+
+// how about arrow functions, james asked
+let f = (x: string, y: string): string => x + y;
