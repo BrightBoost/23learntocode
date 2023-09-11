@@ -9,7 +9,7 @@ function drawCartPage() {
 <h3>Cart Page is Under Construction</h3>
 </div>
 </div>
- `);
+`);
     // add page contents to <main>
     $("#page-container").append(pageShell);
     // set the page title
