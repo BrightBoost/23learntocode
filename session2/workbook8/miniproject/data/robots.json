@@ -1,0 +1,107 @@
+[
+    {
+        "id": "1",
+        "name": "GiggleBot",
+        "softwareVersion": "1.0.0",
+        "functionality": "Laughs at your jokes, even the bad ones",
+        "image": "gigglebot.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Dance-o-Matic",
+        "softwareVersion": "2.1.3",
+        "functionality": "Breakdances on command",
+        "image": "danceomatic.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Sir Sings-a-Lot",
+        "softwareVersion": "1.2.5",
+        "functionality": "Sings opera in the shower",
+        "image": "sirsingsalot.jpg"
+    },
+    {
+        "id": "4",
+        "name": "TickleTron",
+        "softwareVersion": "3.0.1",
+        "functionality": "Tickles on demand",
+        "image": "tickletron.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Chef Bytes",
+        "softwareVersion": "2.0.2",
+        "functionality": "Makes digital pancakes",
+        "image": "chefbytes.jpg"
+    },
+    {
+        "id": "6",
+        "name": "Jokester 3000",
+        "softwareVersion": "1.1.1",
+        "functionality": "Tells dad jokes",
+        "image": "jokester3000.jpg"
+    },
+    {
+        "id": "7",
+        "name": "NapMaster",
+        "softwareVersion": "2.2.2",
+        "functionality": "Snoozes and reminds you to take breaks",
+        "image": "napmaster.jpg"
+    },
+    {
+        "id": "8",
+        "name": "BellyRoll Bot",
+        "softwareVersion": "3.3.3",
+        "functionality": "Does belly rolls for treats",
+        "image": "bellyrollbot.jpg"
+    },
+    {
+        "id": "9",
+        "name": "MoodSwing",
+        "softwareVersion": "1.3.3",
+        "functionality": "Changes colors based on its mood",
+        "image": "moodswing.jpg"
+    },
+    {
+        "id": "10",
+        "name": "BlinkMeNot",
+        "softwareVersion": "2.4.4",
+        "functionality": "Challenges you to blinking contests",
+        "image": "blinkmenot.jpg"
+    },
+    {
+        "id": "11",
+        "name": "WhistleBlower",
+        "softwareVersion": "1.4.4",
+        "functionality": "Whistles your favorite tunes",
+        "image": "whistleblower.jpg"
+    },
+    {
+        "id": "12",
+        "name": "HoverHopper",
+        "softwareVersion": "3.5.5",
+        "functionality": "Hovers around and occasionally hops",
+        "image": "hoverhopper.jpg"
+    },
+    {
+        "id": "13",
+        "name": "ChatterBox",
+        "softwareVersion": "1.5.5",
+        "functionality": "Talks non-stop about random topics",
+        "image": "chatterbox.jpg"
+    },
+    {
+        "id": "14",
+        "name": "MimicMe",
+        "softwareVersion": "2.6.6",
+        "functionality": "Mimics your voice and actions",
+        "image": "mimicme.jpg"
+    },
+    {
+        "id": "15",
+        "name": "GlowGuru",
+        "softwareVersion": "3.6.6",
+        "functionality": "Glows in the dark and gives light shows",
+        "image": "glowguru.jpg"
+    }
+]

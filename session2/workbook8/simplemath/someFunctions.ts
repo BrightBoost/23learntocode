@@ -13,3 +13,5 @@ console.log(x);
 
 // how about arrow functions, james asked
 let f = (x: string, y: string): string => x + y;
+f("hi", "blabla");
+// f(1, 2);
