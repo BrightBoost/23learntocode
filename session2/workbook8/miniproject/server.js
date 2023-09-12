@@ -7,6 +7,11 @@ const PORT = 3000;
 
 // Middleware to parse JSON requests
 app.use(bodyParser.json());
+let urlencodedParser = bodyParser.urlencoded({ extended: true })
+
+// REST API endpoints ------------------------------------------------
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Route to get all robot pets
 app.get('/robots', (req, res) => {
