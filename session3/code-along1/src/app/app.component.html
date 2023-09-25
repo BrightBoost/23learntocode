@@ -2,6 +2,9 @@
 <div class="toolbar" role="banner">
   <input #nameInput type="text">
   <button (click)="sayHello(nameInput.value)">Say hi!</button>
+  <p>The date is {{ date | date: 'MMMM dd yyyy' | uppercase }}</p>
+  <app-example [name]="'Bobby'" [age]="1"></app-example>
+  <app-example [name]="'Charlie'" [age]="0"></app-example>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
