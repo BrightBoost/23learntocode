@@ -21,4 +21,5 @@ let emp1 = new Employee(1, "Siddalee Grace", "Interior Designer", 42.00);
 console.log(emp1);
 emp1.raisePay(0.1);
 console.log(emp1.toString());
+// way to get the name of the class starting from the object / instance
 console.log(emp1.constructor.name);
