@@ -1,6 +1,25 @@
-<h1>{{ title }}</h1>
-<app-item-list [items]="items" [filterText]="filterText" [sortOrder]="sortOrder" [sortField]="sortField"></app-item-list>
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/">Home</a>
+      </li>
+      <li>
+        <a routerLink="/contact">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-<button (click)="onClickChangeSortOrder()">Change sort order</button>
-<input #sortFieldValue type="text">
-<button (click)="onClickChangeSortField(sortFieldValue.value)">Change sort field</button>
+<main>
+  <h1>{{ title }}</h1>
+  <app-item-list [items]="items" [filterText]="filterText" [sortOrder]="sortOrder"
+    [sortField]="sortField"></app-item-list>
+
+  <button (click)="onClickChangeSortOrder()">Change sort order</button>
+  <input #sortFieldValue type="text">
+  <button (click)="onClickChangeSortField(sortFieldValue.value)">Change sort field</button>
+  <router-outlet></router-outlet>
+</main>
+
+<footer></footer>
