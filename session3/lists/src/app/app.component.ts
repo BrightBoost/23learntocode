@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  color = "";
   title = 'lists';
   items = [
     { id: 1, name: 'Item 1', price: 10.99 },
@@ -27,6 +28,11 @@ export class AppComponent {
 
   onClickChangeSortField(sortField: string) {
     this.sortField = sortField;
+  }
+
+  changeBackgroundColor($event: any) {
+    console.log("app component: " + $event);
+    this.color = $event;
   }
 
 }

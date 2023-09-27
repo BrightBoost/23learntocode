@@ -17,7 +17,7 @@
   </nav>
 </header>
 
-<main>
+<main [class]="color">
   <h1>{{ title }}</h1>
   <app-item-list [items]="items" [filterText]="filterText" [sortOrder]="sortOrder"
     [sortField]="sortField"></app-item-list>
@@ -25,6 +25,7 @@
   <button (click)="onClickChangeSortOrder()">Change sort order</button>
   <input #sortFieldValue type="text">
   <button (click)="onClickChangeSortField(sortFieldValue.value)">Change sort field</button>
+  <app-input-color-box (colorPickedEvent)="changeBackgroundColor($event)"></app-input-color-box>
   <router-outlet></router-outlet>
 </main>
 

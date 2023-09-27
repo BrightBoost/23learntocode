@@ -1,0 +1,10 @@
+<form ngNativeValidate (submit)="onFormSubmit($event)">
+    <div *ngFor="let person of persons">
+        <input required name="firstName" type="text" autofocus [(ngModel)]="person.firstName">
+        <input name="lastName" type="text" autofocus [(ngModel)]="person.lastName">
+    </div>
+    <input type="submit" value="Let's go">
+</form>
+<div *ngFor="let person of persons">
+    <p>Hello {{ person.firstName }} {{ person.lastName}}</p>
+</div>

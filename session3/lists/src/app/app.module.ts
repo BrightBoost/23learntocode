@@ -10,6 +10,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ExampleInterpolationComponent } from './example-interpolation/example-interpolation.component';
 import { ExamplePropertyBindingComponent } from './example-property-binding/example-property-binding.component';
 import { ExampleTwoWayBindingComponent } from './example-two-way-binding/example-two-way-binding.component';
+import { MoreComplexTwoWayBindingComponent } from './more-complex-two-way-binding/more-complex-two-way-binding.component';
+import { InputColorBoxComponent } from './input-color-box/input-color-box.component';
 
 const appRoutes: Routes = [
   { path: "home", component: HomeComponent},
@@ -17,6 +19,7 @@ const appRoutes: Routes = [
   { path: "example-interpolation", component: ExampleInterpolationComponent },
   { path: "example-pb", component: ExamplePropertyBindingComponent },
   { path: "example-twb", component: ExampleTwoWayBindingComponent },
+  { path: "example-mctwb", component: MoreComplexTwoWayBindingComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" }
 
 ];
@@ -28,7 +31,9 @@ const appRoutes: Routes = [
     ContactUsComponent,
     ExampleInterpolationComponent,
     ExamplePropertyBindingComponent,
-    ExampleTwoWayBindingComponent
+    ExampleTwoWayBindingComponent,
+    MoreComplexTwoWayBindingComponent,
+    InputColorBoxComponent
   ],
   imports: [
     BrowserModule,
