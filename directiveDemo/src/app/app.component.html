@@ -1,0 +1,11 @@
+<input #nr type="number">
+<button type="button" (click)="processNr(nr.value)">Process!</button>
+<p [ngClass]="classes">This is a demo of ngClass</p>
+<p *ngIf="showText; else noText">Text shows!</p>
+
+<ng-template #noText>
+  Text is not showing.
+</ng-template>
+
+<app-date></app-date>
+<app-post></app-post>
