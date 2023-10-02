@@ -1,0 +1,14 @@
+<table>
+  <tr *ngFor="let service of services">
+    <td>{{ service.ServiceID }}</td>
+    <td>{{ service.ServiceName }}</td>
+    <td>{{ service.Description }}</td>
+  </tr>
+</table>
+<form (submit)="onReviewSubmit()">
+  <!-- use labels instead -->
+  Comment: <input [(ngModel)]="review.comment" type="text" name="comment">
+  Date: <input [(ngModel)]="review.date" type="date" name="date">
+  Reviewer: <input [(ngModel)]="review.reviewer" type="text" name="reviewer">
+  <input type="submit" value="Send">
+</form>
