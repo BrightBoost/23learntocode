@@ -30,6 +30,6 @@ export class PuppyService {
 
   // add a new puppy
   addNewPuppy(puppy: Puppy): Observable<Puppy>{
-    return this.http.post<Puppy>(this.puppiesUrl, JSON.stringify(puppy), this.httpOptions);
+    return this.http.post<Puppy>(this.puppiesUrl + "api/puppies", JSON.stringify(puppy), this.httpOptions);
   }
 }

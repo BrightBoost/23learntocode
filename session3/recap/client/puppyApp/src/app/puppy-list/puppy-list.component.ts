@@ -1,86 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Puppy } from '../models/puppy.model';
+import { PuppyService } from '../providers/puppy.service';
 
 @Component({
   selector: 'app-puppy-list',
   templateUrl: './puppy-list.component.html',
   styleUrls: ['./puppy-list.component.css']
 })
-export class PuppyListComponent {
-  puppies: any[] = [
-    {
-      "name": "Buddy",
-      "breed": "Golden Retriever",
-      "age": 3,
-      "color": "Golden",
-      "favoriteToy": "Squeaky Ball"
-    },
-    {
-      "name": "Bella",
-      "breed": "Labrador Retriever",
-      "age": 2,
-      "color": "Black",
-      "favoriteToy": "Chew Rope"
-    },
-    {
-      "name": "Charlie",
-      "breed": "Beagle",
-      "age": 1,
-      "color": "Tri-color",
-      "favoriteToy": "Stuffed Animal"
-    },
-    {
-      "name": "Lucy",
-      "breed": "Poodle",
-      "age": 4,
-      "color": "White",
-      "favoriteToy": "Rubber Bone"
-    },
-    {
-      "name": "Max",
-      "breed": "German Shepherd",
-      "age": 3,
-      "color": "Black and Tan",
-      "favoriteToy": "Tug Rope"
-    },
-    {
-      "name": "Daisy",
-      "breed": "Bulldog",
-      "age": 2,
-      "color": "Brindle",
-      "favoriteToy": "Squeaky Toy"
-    },
-    {
-      "name": "Rocky",
-      "breed": "Boxer",
-      "age": 3,
-      "color": "Fawn",
-      "favoriteToy": "Tennis Ball"
-    },
-    {
-      "name": "Lola",
-      "breed": "Shih Tzu",
-      "age": 1,
-      "color": "Brown and White",
-      "favoriteToy": "Plush Duck"
-    },
-    {
-      "name": "Oliver",
-      "breed": "Dachshund",
-      "age": 2,
-      "color": "Red",
-      "favoriteToy": "Squeaky Squirrel"
-    },
-    {
-      "name": "Sadie",
-      "breed": "Rottweiler",
-      "age": 4,
-      "color": "Black and Tan",
-      "favoriteToy": "Rubber Ball"
-    }
-  ]
-
-  constructor(private router: Router) {}
+export class PuppyListComponent implements OnInit {
+  puppies: Puppy[] = [];
+    
+  constructor(private router: Router, private puppyService: PuppyService) {}
+  ngOnInit(): void {
+    this.puppyService.getPuppies().subscribe(data => {
+      this.puppies = data;
+    });
+  }
   // workaround for getting the props of an object
   // here's how to use in component.html
   // <p *ngFor="let prop of getKeys(puppy)">{{prop}}</p>
@@ -89,7 +25,7 @@ export class PuppyListComponent {
     return Object.keys(puppy);
   }
 
-  showDetailsPage(puppy: any) {
+  showDetailsPage(puppy: Puppy) {
     this.router.navigate(["puppyDetails"], {
       queryParams: {
         name: puppy.name

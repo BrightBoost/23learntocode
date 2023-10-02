@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem;">
+<div *ngIf="puppy" class="card" style="width: 18rem;">
     <img [src]="'/assets/' + puppy.name.toLowerCase() + '.jpg'" class="card-img-top" [alt]="puppy.breed">
     <div class="card-body">
         <h5 class="card-title">{{ puppy.name }}</h5>

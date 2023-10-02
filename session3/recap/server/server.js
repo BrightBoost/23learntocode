@@ -36,6 +36,26 @@ app.get("/api/puppies", function (req, res) {
     res.send(data);
 });
 
+// GET puppy by name
+app.get("/api/puppies/:name", function (req, res) {
+    let name = req.params["name"];
+    console.log("Got a GET request for puppy by name");
+
+    let data = fs.readFileSync(__dirname + "/data/puppies.json", "utf8");
+
+    // Log returned data for debugging purposes
+    data = JSON.parse(data);
+    let matchingPuppy = data.find(puppy => puppy.name == name);
+    if(!matchingPuppy) {
+        res.status(404).send();
+        return;
+    }
+    console.log("Returning...");
+    console.log(matchingPuppy);
+
+    res.send(matchingPuppy);
+});
+
 // POST A NEW PUPPY
 app.post("/api/puppies", urlencodedParser, function (req, res) {
     console.log("Got a POST request for to add a puppy");
@@ -51,7 +71,7 @@ app.post("/api/puppies", urlencodedParser, function (req, res) {
         breed: req.body.breed,
         age: req.body.age,
         color: req.body.color,
-        favoriteToy: req.body,favoriteToy
+        favoriteToy: req.body.favoriteToy
     };
 
     // Place the new review in the list and re-save the file
