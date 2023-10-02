@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;" *ngFor="let puppy of puppies">
+    <img [src]="'/assets/' + puppy.name.toLowerCase() + '.jpg'" class="card-img-top" [alt]="puppy.breed">
+    <div class="card-body">
+        <h5 class="card-title">{{ puppy.name }}</h5>
+        <p class="card-text">This is a {{ puppy.breed }} puppy.</p>
+    </div>
+    <div class="card-body">
+        <a (click)="showDetailsPage(puppy)" class="card-link">Details {{ puppy.name }}</a>
+    </div>
+</div>

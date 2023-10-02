@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+    <img [src]="'/assets/' + puppy.name.toLowerCase() + '.jpg'" class="card-img-top" [alt]="puppy.breed">
+    <div class="card-body">
+        <h5 class="card-title">{{ puppy.name }}</h5>
+        <p class="card-text">This is a {{ puppy.breed }} puppy. He likes to play with his {{ puppy.favoriteToy }}.</p>
+        <p class="card-text">He is {{ puppy.age }} months old. His color is {{ puppy.color }}.</p>
+    </div>
+
+</div>

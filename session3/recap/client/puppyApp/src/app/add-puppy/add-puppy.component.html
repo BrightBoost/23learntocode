@@ -1,0 +1,9 @@
+<form (submit)="onSubmitPuppy()">
+    <!-- use labels in real life -->
+    name: <input type="text" [(ngModel)]="puppy.name" name="name"><br>
+    breed: <input type="text" [(ngModel)]="puppy.breed" name="breed"><br>
+    age: <input type="number" [(ngModel)]="puppy.age" name="age"><br>
+    color: <input type="text" [(ngModel)]="puppy.color" name="color"><br>
+    favoriteToy: <input type="text" [(ngModel)]="puppy.favoriteToy" name="favoriteToy"><br>
+    <input type="submit" value="Add puppy">
+</form>
