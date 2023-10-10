@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blablabla';
+  things: Array<string> = [];
+  moreThings: string[] = [];
+
+  doSomething(): void {
+
+  }
 }
