@@ -15,5 +15,6 @@ public class InputExamples {
         System.out.println("What's your favorite math operator?");
         String operator = scanner.nextLine();
         System.out.println("I love " + operator + " too!");
+        scanner.close();
     }
 }
