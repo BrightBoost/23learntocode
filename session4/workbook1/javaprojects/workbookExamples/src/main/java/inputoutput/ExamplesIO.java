@@ -1,7 +1,6 @@
 package inputoutput;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 
 public class ExamplesIO {
@@ -16,6 +15,16 @@ public class ExamplesIO {
             }
 
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            // create filewriter with a true second arg for the constructor to trigger append mode
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("example1.txt", true));
+            bufferedWriter.append("blablabla\n");
+            bufferedWriter.append("lalala");
+            bufferedWriter.close();
+        } catch(IOException e) {
             e.printStackTrace();
         }
     }
