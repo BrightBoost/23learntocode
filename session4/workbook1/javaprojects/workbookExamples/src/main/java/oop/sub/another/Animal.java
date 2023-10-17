@@ -1,15 +1,19 @@
-package oop;
+package oop.sub.another;
 
 public class Animal {
     private String name;
     protected boolean cute;
 
     public Animal() {
-Object
+
     }
     public Animal(String name, boolean cute) {
         this.name = name;
         this.cute = cute;
+    }
+
+    public void makeSound() {
+        System.out.println("animal says animal stuff");
     }
 
     public String getName() {
