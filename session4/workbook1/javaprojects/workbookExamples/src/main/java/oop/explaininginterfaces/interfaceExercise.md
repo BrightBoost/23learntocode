@@ -1,6 +1,9 @@
 - Create a new package for this exercise
 - In the package, create the following classes: Vehicle, Car, Boat, Airplane
+- Make logical relations between those classes
 - Create an interface Chargeable
 - Give the interface the method charge
 - Create subclasses of the Car and Boat that implement the Chargeable interface, make those concrete (not abstract) classes
 - Do what you must do to make the classes that implement the interfaces compile
+- Create an ArrayList<Chargeable>, which vehicles can you add?
+- Can you call the charge method on members of the arraylist?
