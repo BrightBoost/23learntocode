@@ -6,6 +6,7 @@ public class Rabbit extends Animal implements Prey {
     }
 
     public void run() {
+        beingTasty();
         System.out.println("hopping away");
     }
 

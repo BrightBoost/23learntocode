@@ -4,5 +4,8 @@ public class App {
     public static void main(String[] args) {
         Lion l = new Lion();
         l.catchAndEat(new Rabbit());
+
+        Rabbit r = new Rabbit();
+        r.run();
     }
 }
