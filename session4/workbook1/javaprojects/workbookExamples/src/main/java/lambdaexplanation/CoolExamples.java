@@ -17,7 +17,11 @@ public class CoolExamples {
         names.add("Bo");
 
         names.stream().filter(s -> s.length() > 4).forEach(s -> System.out.println(s));
+        // woops this is a java 17 feature
         List<String> filteredNames = names.stream().filter(s -> s.startsWith("G")).toList();
+
+        // here's the "old" version of doing
+        List<String> filteredNames2 = names.stream().filter(s -> s.startsWith("G")).collect(Collectors.toList());
         System.out.println(filteredNames);
         names.stream().map(s -> s.length()).forEach(i -> System.out.println(i));
         names.stream()
