@@ -1,7 +1,5 @@
 package dates;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 public class JavaDates {
@@ -38,6 +36,19 @@ public class JavaDates {
         String formattedDate = ldtFunny4.format(dtf);
         System.out.println(formattedDate);
 
+        System.out.println("****************************************");
+
+        LocalDateTime rightNow = LocalDateTime.now();
+        LocalDateTime returnBy = rightNow.plusDays(90).plusHours(9);
+
+        Period period = Period.between(rightNow.toLocalDate(), returnBy.toLocalDate());
+        System.out.println(returnBy);
+        System.out.println("Period: " + period);
+        System.out.println("Period days:" + period.getDays());
+
+        Duration duration = Duration.between(rightNow.toLocalTime(), returnBy.toLocalTime());
+        System.out.println(returnBy);
+        System.out.println("Duration: " + duration);
 
 
 

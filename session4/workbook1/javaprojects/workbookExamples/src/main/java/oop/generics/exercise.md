@@ -16,8 +16,8 @@
     - It should have a property `content`  that can hold a `Chihuahua` object
 
 5. **In your `main` method in another class, do the following:**
-    - Instantiate a `LaptopBag` and add `Laptop` objects to it.
-    - Instantiate a `ChihuahuaBag` and add `Chihuahua` objects to it.
+    - Instantiate a `LaptopBag` and add `Laptop` object to it.
+    - Instantiate a `ChihuahuaBag` and add `Chihuahua` object to it.
 
 
 ### Part 3: Generic Bag
