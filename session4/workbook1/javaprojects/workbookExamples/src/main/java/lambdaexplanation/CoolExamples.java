@@ -6,6 +6,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CoolExamples {
     public static void main(String[] args) {
@@ -26,7 +27,7 @@ public class CoolExamples {
         names.stream().map(s -> s.length()).forEach(i -> System.out.println(i));
         names.stream()
                 .filter(s -> s.length() > 2)
-                .map(s -> s.charAt(0) + "" + (s.length() - 2) + s.charAt(s.length()-1))
+                .map(s -> s.charAt(0) + "" + (s.length() - 2) + s.charAt(s.length() - 1))
                 .forEach(i -> System.out.println(i));
 
         String result = names.stream().collect(Collectors.joining(" - "));
@@ -52,5 +53,19 @@ public class CoolExamples {
         String any = names.stream().findAny().orElse("no value");
         String any2 = names.stream().filter(s -> s.startsWith("G")).findAny().orElse("no value");
         System.out.println("find any:" + any2);
+
+        Stream.iterate(0, i -> i + 1).limit(100).filter(x -> isPrime(x)).forEach(s -> System.out.println(s));
+    }
+
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if ((num % i) == 0)
+                return false;
+        }
+        return true;
     }
 }
+
