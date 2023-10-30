@@ -7,7 +7,7 @@ public class MainWithPreparedStatement {
         // connection url
         String dbUrl = "jdbc:mysql://localhost:3306/sakila?serverTimezone=UTC&useSSL=false";
 
-        try(Connection connection = DriverManager.getConnection(dbUrl, "root", "root");
+        try(Connection connection = DriverManager.getConnection(dbUrl, args[0], args[1]);
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM sakila.actor \n" +
                     "WHERE first_name = ? AND actor_id = ?");
 
