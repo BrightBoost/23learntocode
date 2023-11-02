@@ -13,6 +13,7 @@ public class Main {
 
         NorthwindDataManager ndm = new NorthwindDataManager(basicDataSource);
 
+        // this should have been in an UI class
         System.out.println("Do you want to see all the products?");
         Scanner scanner = new Scanner(System.in);
         String answer = scanner.nextLine();
@@ -25,5 +26,8 @@ public class Main {
         for(Product p : ndm.getAllProducts()) {
             System.out.println(p);
         }
+
+
+
     }
 }
