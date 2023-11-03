@@ -3,6 +3,7 @@ package com.hca.service;
 import com.hca.dao.ProductDao;
 import com.hca.dao.SimpleProductDao;
 import com.hca.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.stream.Collectors;
 public class ProductService {
     private ProductDao productDao;
 
+    @Autowired
     public ProductService(ProductDao productDao) {
         this.productDao = productDao;
     }

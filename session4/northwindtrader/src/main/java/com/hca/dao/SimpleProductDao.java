@@ -9,7 +9,7 @@ import java.util.HashMap;
 @Component
 public class SimpleProductDao implements ProductDao {
 
-    HashMap<Integer, Product> products;
+    private HashMap<Integer, Product> products;
     int nextId = 5;
     public SimpleProductDao() {
         products = new HashMap<>();
