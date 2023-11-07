@@ -3,6 +3,7 @@ package com.hca.demo.model;
 import java.util.List;
 
 public class Recipe {
+    private long id;
     private String description;
     private List<String> ingredients;
 
@@ -10,9 +11,18 @@ public class Recipe {
 
     }
 
+
     public Recipe(String description, List<String> ingredients) {
         this.description = description;
         this.ingredients = ingredients;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getDescription() {
