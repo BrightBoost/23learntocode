@@ -21,6 +21,11 @@ public class RecipeController {
         return recipeRepository.findAll();
     }
 
+    @GetMapping("/recipeByDescription/{description}")
+    public List<Recipe> getRecipeByDescription(@PathVariable String description) {
+        return recipeRepository.findByDescriptionIsContaining(description);
+    }
+
     // requestbody is used to pass something in as json in th request body
     @PostMapping("/recipe")
     public void addRecipe(@RequestBody Recipe recipe) {

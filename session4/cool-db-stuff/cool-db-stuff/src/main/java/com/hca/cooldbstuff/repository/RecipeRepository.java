@@ -9,4 +9,7 @@ import java.util.List;
 @Repository
 public interface RecipeRepository extends CrudRepository<Recipe, Long> {
     List<Recipe> findAll();
+    List<Recipe> findByDescriptionIsContaining(String description);
+
+   // https://www.baeldung.com/spring-jpa-like-queries
 }
