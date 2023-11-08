@@ -1,9 +1,7 @@
 package com.hca.cooldbstuff.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Recipe {
@@ -13,6 +11,9 @@ public class Recipe {
     private long id;
     private String description;
     private String ingredients;
+
+    @ElementCollection
+    private List<String> ingredientList;
 
     public Recipe(){
 
@@ -47,6 +48,14 @@ public class Recipe {
 
     public void setIngredients(String ingredients) {
         this.ingredients = ingredients;
+    }
+
+    public List<String> getIngredientList() {
+        return ingredientList;
+    }
+
+    public void setIngredientList(List<String> ingredientList) {
+        this.ingredientList = ingredientList;
     }
 
     @Override
